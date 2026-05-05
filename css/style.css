@@ -28,13 +28,99 @@ header {
     direction: ltr;
 }
 
-/* عندما يكون عرض الشاشة 768 بكسل أو أقل (الهواتف) */
+/* عندما يكون عرض الشاشة 768 بكسل أو أقل (الهواتف والأجهزة اللوحية) */
 @media (max-width: 768px) {
+
     body {
         font-size: 14px;
+        padding: 12px;
     }
-    .main-section {
-        flex-direction: column; /* ترتيب العناصر عمودياً */
+
+    /* ===== الهيدر ===== */
+    header {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding-bottom: 12px;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    /* إخفاء نص الإيميل على الهاتف وإظهار الأيقونة فقط */
+    .mail p {
+        display: none;
+    }
+
+    .insta svg, .wts svg, .mail svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* مفتاح اللغة في سطر منفصل */
+    .lang-switch {
+        order: 10; /* يجعله آخر عنصر */
+    }
+
+    /* ===== القسم الرئيسي ===== */
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #profile-img {
+        width: 160px;
+        height: 160px;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .text-en, .text-ar {
+        text-align: center;
+    }
+
+    .text-en h1, .text-ar h1 {
+        font-size: 1.3rem;
+    }
+
+    .text-en p, .text-ar p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    /* ===== بطاقات المهارات ===== */
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .python-card, .godot-card, .html-card, .css-card, .js-card {
+        width: 100%;
+        max-width: 340px;
+        min-height: 100px;
+        padding: 12px 15px;
+        box-sizing: border-box;
+    }
+
+    .python-card img, .godot-card img,
+    .html-card img, .css-card img, .js-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-icon {
+        padding-bottom: 20px;
+    }
+
+    /* عنوان المهارات */
+    .skl-t {
+        text-align: center;
+        font-size: 1.3rem;
     }
 }
 /* التحكم في اللغات */

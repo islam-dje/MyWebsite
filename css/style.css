@@ -28,7 +28,15 @@ header {
     direction: ltr;
 }
 
-
+/* عندما يكون عرض الشاشة 768 بكسل أو أقل (الهواتف) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .main-section {
+        flex-direction: column; /* ترتيب العناصر عمودياً */
+    }
+}
 /* التحكم في اللغات */
 body.lang-ar {
     direction: rtl;
